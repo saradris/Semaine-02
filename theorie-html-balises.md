@@ -8,33 +8,44 @@ Il existe une multitude de balises à utiliser pour rédiger un document HTML, n
 
 ## Un peu de sémantique
 
-Un élément sémantique est un élément avec une signification.
+Un élément sémantique est un élément avec une signification. Une phrase en titre n'a pas la même signification qu'en pied de page. 
 
-Exemple d'une balise non-sémantique: \<div>, \<span>
+C'est pour cela que pour bien composer un document html, il faut d'abord raisonner en termes de définition de chacun des composants plutôt qu'en termes d'apparence graphique. Pour ce faire on va se demander l'utilité de chaque bout de code: "Est-ce que ce texte est: un titre? Un paragraphe? Une légende? Et ce bloc, est-ce une section? Une note de l'auteur?" et en fonction de la réponse on va utiliser la balise qui correspond le mieux à notre élément.
 
-Exemple d'une balise sémantique: \<article>, \<section>
+Exemple d'une balise non-sémantique: `<div>`, `<span>`
 
-Le but de ces balises est de donner au navigateur et au développeur une description du contenu qui suit. Par exemple il existe une balise \<header>, ce qui permet d'indiquer à votre navigateur que tout le contenu qui s'y trouvera ferra partie du haut de votre page. C'est une alternative et une bonne pratique par rapport à \<div class="header">
+Exemple d'une balise sémantique: `<article>`, `<section>`
+
+Le but de ces balises est de donner au navigateur et au développeur une description du contenu qui suit. Par exemple il existe une balise `<header>`, ce qui permet d'indiquer à votre navigateur que tout le contenu qui s'y trouvera ferra partie du haut de votre page. C'est une alternative et une bonne pratique par rapport à `<div class="header">`
 
 Voici la liste de ces balises: 
 
-* \<article>
-* \<aside>
-* \<details>
-* \<figcaption>
-* \<figure>
-* \<footer>
-* \<header>
-* \<main>
-* \<mark>
-* \<nav>
-* \<section>
-* \<summary>
-* \<time>
+* `<article>`
+* `<aside>`
+* `<details>`
+* `<figcaption>`
+* `<figure>`
+* `<footer>`
+* `<header>`
+* `<main>`
+* `<mark>`
+* `<nav>`
+* `<section>`
 
 ![semantic](https://www.w3schools.com/html/img_sem_elements.gif)
 
-> :bulb: [plus d'infos](https://www.w3schools.com/html/html5_semantic_elements.asp)
+> :book: [plus d'infos](https://www.w3schools.com/html/html5_semantic_elements.asp)
+
+### SEO
+
+L'objectif d'un moteur de recherche est de fournir les meilleurs résultats à l'utilisateur. Pour ce faire les moteurs de recherches utilisent des bots qui scanne toutes les pages web et essaye de "comprendre" ce dont parle la page grâce à la structure html (titre, sous-titre, liste,...).
+
+### Accessibilité
+
+On veut que votre page soit accessible au plus de personne possible, y compris les aveugles et mal-voyant. Pour faciliter la lecture de ces sites par les liseuses d'écran, il faut utiliser au mieux les balises sémantiques.
+
+> :bulb: Essayez par vous même avec [ces liseuses d'écran](https://stackoverflow.com/a/43368748/53960)
+
 
 ## La balise \<div>
 
@@ -57,7 +68,7 @@ La **div**ision est un conteneur. Cette balise permet de structurer sa page en "
 
 ## La balise \<p>
 
-P pour paragraphe, c'est la balise la plus courante pour rédiger du texte. C'est un bloc qui est suivis d'un saut à la ligne. On peut mettre la balise \<p> dans un \<div> mais jamais de \<p> dans un autre.
+P pour paragraphe, c'est la balise la plus courante pour rédiger du texte. C'est un bloc qui est suivis d'un saut à la ligne. On peut mettre la balise `<p>` dans un `<div>` mais jamais de `<p>` dans un autre.
 
 ```html
 <p>Je suis un paragraphe</p>
@@ -121,13 +132,13 @@ Cette balise sert à insérer une image dans votre page. Elle peut se placer un 
 * **src:** tout simplement un lien externe ou interne vers votre fichier image.
 * **alt:** une description que les utilisateurs verront si votre image met du temps à se charger, si elle n'est plus en ligne ou pour aider la synthèse vocale.
 
-Évidement une balise **\<img>** peut prendre d'autres attributs, notamment des valeurs de taille, mais les deux vu ci dessus sont les plus courant.
+Évidement une balise `<img>` peut prendre d'autres attributs, notamment des valeurs de taille, mais les deux vu ci dessus sont les plus courant.
 
 > :book: [quelques infos complémentaire sur cette balise](https://www.w3schools.com/tags/tag_img.asp)
 
 ## La balise \<a>
 
-Il est maintenant temps d'insérer un lien dans votre code. Pour ce faire on utilise la balise \<a>. Elle se place un peu où vous voulez et doit surtout englober un contenu comme du texte, une image ou même une \<div>.
+Il est maintenant temps d'insérer un lien dans votre code. Pour ce faire on utilise la balise `<a>`. Elle se place un peu où vous voulez et doit surtout englober un contenu comme du texte, une image ou même une `<div>`.
 
 ```html
 <a href="mon lien" title="titre du lien">Mon texte cliquable</a>
